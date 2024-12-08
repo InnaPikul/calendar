@@ -1,0 +1,24 @@
+@use '/src/styles/_variables' as vars
+
+.day
+  position: relative
+  font-size: 16px
+  padding: 12px 0
+  text-align: center
+  &--inactive 
+    color: vars.$text-secondary
+  .dotList
+    position: absolute
+    bottom: 0
+    right: 50%
+    transform: translateX(50%)
+    display: flex
+    &__item 
+      display: block
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: 'gray'
+      cursor: pointer
+      &:not(:last-child)
+          margin-right: 2px

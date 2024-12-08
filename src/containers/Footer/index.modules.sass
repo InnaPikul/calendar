@@ -1,0 +1,28 @@
+@use '/src/styles/_variables' as vars
+
+.footer 
+  &__inner 
+    text-align: center
+    padding: 24px 0
+  &__logo 
+    margin-bottom: 24px
+  &__nav 
+    display: flex
+    justify-content: center
+    margin-bottom: 24px
+  &__navItem 
+    padding: 0 30px
+    font-size: 16px
+    line-height: 1
+    font-weight: 250
+    color: vars.$text-default
+    text-decoration: none
+    &:hover 
+      text-decoration: underline
+    @media (max-width: vars.$mobileSmall)
+      padding: 0 12px
+  .copyright
+    font-weight: 250
+    font-size: 14px
+    line-height: 14px
+    color: vars.$text-secondary

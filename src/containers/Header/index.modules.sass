@@ -1,0 +1,31 @@
+@use '/src/styles/_variables' as vars
+
+$paddingBottom: 24px
+
+.header 
+  &__inner 
+    display: flex
+    justify-content: space-between
+    padding: $paddingBottom 0 0
+  &__nav 
+    display: flex
+  &__navItem 
+    display: block
+    margin: 0 40px
+    padding-bottom: $paddingBottom
+    font-size: 20px
+    line-height: 1
+    font-weight: 250
+    color: vars.$text-default
+    text-decoration: none
+    &:last-child 
+      margin-right: 0
+    &:hover 
+      border-bottom: 1px solid vars.$primary
+    @media (max-width: vars.$mobile) 
+      margin: 0 20px
+    @media (max-width: vars.$mobileSmall) 
+      font-size: 16px
+      margin: 0 8px
+    &--active 
+      border-bottom: 1px solid vars.$primary

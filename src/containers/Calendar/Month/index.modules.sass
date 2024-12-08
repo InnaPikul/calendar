@@ -1,0 +1,30 @@
+@use '/src/styles/_variables' as vars
+
+.month
+  display: flex
+  flex-direction: column
+  margin-bottom: 12px
+  padding-bottom: 12px
+  border-bottom: 1px solid vars.$border-default
+  &__inner
+    height: 100%
+    border-right: 1px solid vars.$border-default
+    padding: 12px
+  &__grid
+    font-weight: 300
+  &__name
+    margin-bottom: 24px
+    font-weight: 250
+    font-size: 32px
+    line-height: 1
+  &__gridHeader
+    display: grid
+    grid-template-columns: repeat(7, 1fr)
+    gap: 5px
+    .weekday
+      padding: 8px 0
+      text-align: center
+      color: vars.$text-secondary
+  &__gridBody
+    display: grid
+    grid-template-columns: repeat(7, 1fr)

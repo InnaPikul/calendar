@@ -1,0 +1,49 @@
+@use '/src/styles/_variables' as vars
+
+.calendar
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  align-items: stretch
+  padding: 12px 0 28px
+  border-top: 1px solid vars.$border-default
+  border-bottom: 1px solid vars.$border-default
+  & > :nth-child(3n) .month__inner
+    border-right: none
+  & > :nth-child(3n + 1) .month__inner
+    padding-left: 0
+  & > :nth-last-child(-n +3)
+    border-bottom: none
+    margin-bottom: 0
+  @media (max-width: vars.$mobile)
+    grid-template-columns: repeat(2, 1fr)
+    & > :nth-child(3n) .month__inner
+      border-right: 1px solid vars.$border-default
+    & > :nth-child(2n) .month__inner
+      border-right: none
+    & > :nth-child(2n) .month__inner 
+      border-right: none
+    & > :nth-child(3n + 1) .month__inner 
+      padding-left: 12px
+    & > :nth-child(odd) .month__inner 
+      padding-left: 0
+    & > :nth-last-child(-n +3) 
+      border-bottom: 1px solid vars.$border-default
+      margin-bottom: 12px
+    & > :nth-last-child(-n +2) 
+      border-bottom: none
+      margin-bottom: 0
+  @media (max-width: vars.$mobileSmall) 
+    grid-template-columns: repeat(1, 1fr)
+    .month__inner 
+      border-right: none
+      padding-left: 0
+      padding-right: 0
+    & > :nth-child(3n) .month__inner 
+      border-right: none
+    & > :nth-child(3n + 1) .month__inner 
+      padding-left: 0
+    & > :nth-last-child(-n +2) 
+      border-bottom: 1px solid vars.$border-default
+      margin-bottom: 0
+    & > :last-child 
+      border-bottom: none

@@ -1,0 +1,54 @@
+@use '/src/styles/_variables' as vars
+
+.filter 
+  display: flex
+  flex-wrap: wrap
+  padding: 0
+  margin-bottom: 20px
+  @media (max-width: vars.$mobile) 
+      margin-bottom: 8px
+  &__item 
+    margin: 0 24px 0 0
+    @media (max-width: vars.$mobile) 
+        margin: 0 12px 0 0
+.label
+  padding: 4px 16px
+  font-size: 16px
+  line-height: 20px
+  border-radius: 16px
+  cursor: pointer
+  transition: color 0.3s ease, background-color 0.3s ease
+  background-color: gray
+  white-space: nowrap
+  margin-bottom: 16px
+  &:last-child
+    margin-right: 0
+  &:first-letter 
+    text-transform: uppercase
+  &--small 
+    font-size: 14px
+    line-height: 14px
+  &--meeting 
+    background-color: rgba(vars.$primary, 0.16)
+    color: vars.$primary
+    &.active 
+      background-color: vars.$primary
+      color: vars.$text-dark
+  &--qa 
+    background-color: rgba(vars.$qa, 0.16)
+    color: vars.$qa
+    &.active
+      background-color: vars.$qa
+      color: vars.$text-dark
+  &--conference 
+    background-color: rgba(vars.$conf, 0.16)
+    color: vars.$conf
+    &.active 
+      background-color: vars.$conf
+      color: vars.$text-dark
+  &--webinar 
+    background-color: rgba(vars.$web, 0.16)
+    color: vars.$web
+    &.active 
+      background-color: vars.$web
+      color: vars.$text-dark
